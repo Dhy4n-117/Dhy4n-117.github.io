@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray */
+            color: #F3F4F6; /* Light gray */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section {
+            padding: 8rem 1rem;
+        }
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1rem;
+            }
+        }
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect" id="header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-2xl font-bold gradient-text">JD</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#experience" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#experience" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/111827/38bdf8?text=');">
+            <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                    <!-- EDIT: YOUR NAME -->
+                    <span class="block">Hi, I'm</span><span class="block gradient-text mt-2">John Doe</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+                    <!-- EDIT: YOUR TAGLINE -->
+                    I'm a passionate Full-Stack Developer creating modern and responsive web applications.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#contact" class="bg-sky-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-600 transition duration-300">Get in Touch</a>
+                    <a href="#projects" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center gradient-text">About Me</h2>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <img src="https://placehold.co/400x400/1f2937/f3f4f6?text=Your+Photo" alt="Your Name" class="rounded-full mx-auto shadow-lg w-64 h-64 object-cover">
+                    </div>
+                    <div class="md:col-span-2">
+                         <!-- EDIT: YOUR BIO -->
+                        <p class="text-lg text-gray-300 mb-6">
+                            Hello! I'm John, a developer with a passion for building beautiful and functional websites. With over 5 years of experience in the field, I specialize in JavaScript, React, and Node.js. I enjoy turning complex problems into simple, elegant solutions.
+                        </p>
+                        <p class="text-lg text-gray-300">
+                            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+                        </p>
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 text-sky-400">My Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- EDIT: YOUR SKILLS -->
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">HTML & CSS</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">JavaScript</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">React</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Node.js</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Tailwind CSS</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Firebase</span>
+                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center gradient-text">My Projects</h2>
+                <p class="text-center mt-4 max-w-2xl mx-auto text-gray-400">Here are a few projects I've worked on recently.</p>
+                <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- EDIT: YOUR PROJECTS. DUPLICATE THIS BLOCK FOR EACH PROJECT -->
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/818cf8?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-sky-400">Project Title 1</h3>
+                            <p class="text-gray-300 mb-4">A brief description of the project, the technologies used, and my role in its development.</p>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/818cf8?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-sky-400">Project Title 2</h3>
+                            <p class="text-gray-300 mb-4">A brief description of the project, the technologies used, and my role in its development.</p>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/1f2937/818cf8?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-sky-400">Project Title 3</h3>
+                            <p class="text-gray-300 mb-4">A brief description of the project, the technologies used, and my role in its development.</p>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- END OF PROJECT BLOCK -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center gradient-text">Work Experience</h2>
+                <div class="mt-12 max-w-3xl mx-auto">
+                    <div class="relative">
+                        <!-- Vertical line -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-700"></div>
+                        
+                        <!-- EDIT: YOUR EXPERIENCE. DUPLICATE BLOCKS FOR EACH ROLE -->
+                        <!-- Timeline Item 1 -->
+                        <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                                <h1 class="mx-auto font-semibold text-lg text-white"></h1>
+                            </div>
+                            <div class="order-1 bg-gray-800 rounded-lg shadow-xl w-5/12 px-6 py-4 glass-effect">
+                                <h3 class="font-bold text-sky-400 text-xl">Senior Developer</h3>
+                                <p class="text-sm font-medium text-gray-400">Tech Company Inc. | 2020 - Present</p>
+                                <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-3">Led a team of developers in creating a scalable e-commerce platform. Responsible for architecture and deployment.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                                <h1 class="mx-auto text-white font-semibold text-lg"></h1>
+                            </div>
+                            <div class="order-1 bg-gray-800 rounded-lg shadow-xl w-5/12 px-6 py-4 glass-effect">
+                                <h3 class="font-bold text-sky-400 text-xl">Junior Developer</h3>
+                                <p class="text-sm font-medium text-gray-400">Startup Co. | 2018 - 2020</p>
+                                <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-3">Developed and maintained front-end features for various client websites using React and Vue.js.</p>
+                            </div>
+                        </div>
+                        <!-- END OF EXPERIENCE BLOCK -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center gradient-text">Get In Touch</h2>
+                <p class="text-center mt-4 max-w-2xl mx-auto text-gray-400">I'm currently open to new opportunities. Feel free to send me a message!</p>
+                <div class="mt-12 max-w-lg mx-auto">
+                    <div class="glass-effect rounded-lg p-8">
+                        <div class="flex flex-col items-center space-y-4">
+                             <!-- EDIT: YOUR CONTACT INFO -->
+                            <p class="text-lg text-gray-300">
+                                Email: <a href="mailto:your.email@example.com" class="text-sky-400 hover:underline">your.email@example.com</a>
+                            </p>
+                            <p class="text-lg text-gray-300">
+                                LinkedIn: <a href="#" class="text-sky-400 hover:underline">linkedin.com/in/yourprofile</a>
+                            </p>
+                            <p class="text-lg text-gray-300">
+                                GitHub: <a href="#" class="text-sky-400 hover:underline">github.com/yourusername</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const svgs = mobileMenuButton.querySelectorAll('svg');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            svgs[0].classList.toggle('hidden');
+            svgs[1].classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                svgs[0].classList.remove('hidden');
+                svgs[1].classList.add('hidden');
+            });
+        });
+
+        // Sticky header on scroll
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-opacity-90');
+            } else {
+                 header.classList.remove('bg-opacity-90');
+            }
+        });
+
+    </script>
+
+</body>
+</html>
